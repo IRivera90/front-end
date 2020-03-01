@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  </head>
+
+  <body>
+<!-- side bar  -->
+<div id="wrapper" class='toggled'>
+<div class='border-right' id='sidebar-wrapper'>
+  <!-- <div class='sidebar-heading'>Side Bar</div> -->
+  <div class='list-group list-group-flush'>
+    <button type='button' class='surveyIndex list-group-item list-group-item-action bg-light'>Get all Surveys</button>
+    <button type='button' class='potatoIndex list-group-item list-group-item-action bg-light'>Get all Tatoes</button>
+    <div class='list-group-item list-group-item-action allSurveyList'></div>
+  </div>
+</div>
+
+<!-- end sidebar -->
+
+<div class="topnav">
+  <!-- <h1>Test</h1> -->
+  <a class="signup btn btn-default authBtn" href="#sign-up">Sign Up</a>
+  <a class="signin btn btn-default authBtn" href="#sign-in">Sign In</a>
+  <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Show Surveys</a>
+  <a class="changePassNav btn btn-default authBtn" href="#change-pass">Change Password</a>
+  <a class="signOutNav btn btn-default authBtn" id="sign-out" href="#sign-out">Sign Out</a>
+</div>
+
+<div id="page-content-wrapper">
+
+    <h1>Surveys</h1>
+
+    <p id='message'></p>
+
+        <form class="pt-4 pl-2" id='sign-up'>
+          <fieldset>
+            <!-- <legend>Sign Up!</legend> -->
+            <input name="credentials[email]" type='email' placeholder="Email"/>
+            <input name="credentials[password]" type='password'placeholder="Password"/>
+            <input name="credentials[password_confirmation]" type='password'placeholder="Password Confirmation"/>
+            <button class="btn btn-primary" type='submit' value='Sign-up!'>Sign Up</button>
+          </fieldset>
+        </form>
+
+        <form class="pt-4 pl-2" id='sign-in'>
+          <fieldset>
+            <!-- <legend>Sign In</legend> -->
+            <input name="credentials[email]" type='email' placeholder="Email"/>
+            <input name="credentials[password]" type='password' placeholder="Password"/>
+            <button class="btn btn-primary" type='submit' value='Sign-in'>Sign In</button>
+          </fieldset>
+        </form>
+
+        <div class="row justify-content-center text-center pt-4">
+          <form id='change-password'>
+            <fieldset>
+            <!-- <legend>Change Password</legend> -->
+              <input name="passwords[old]" type='password' placeholder="Old Password"/>
+              <input name="passwords[new]" type='password' placeholder="New Password"/>
+              <button class="btn btn-primary" type='submit' value='Change Password'>Change</button>
+            </fieldset>
+            <!-- <button id="cancel-change">Cancel</button> -->
+            <button class="btn btn-secondary" id="cancel-change">Cancel</button>
+          </form>
+
+        </div>
+      <!-- <button type='button' class='btn btn-dark surveyIndex'> Get All Surveys</button> -->
+      <button type='button' class='btn btn-dark createSurvey'> Create a survey</button>
+      <button type='button' class='btn btn-dark createPotato'> Create a potato</button>
+
+      <div id='surveybox'> </div>
+
+      <form id="createPotato">
+        <fieldset>
+        <legend>Potato form</legend>
+            <input name="potato[name]" type='text' placeholder='Potato type'/><br>
+            <input name="potato[weight]" type='text' placeholder='Potato weight'/><br>
+            <button type='submit' class='btn btn-dark'>Create</button>
+        </fieldset>
+      </form>
+
+      <form id="createSurvey">
+        <fieldset>
+        <legend>Survey form</legend>
+            <input name="survey[question]" type='text' placeholder='Question'/><br>
+            <input name="answer1" type='text' /><br>
+            <input name="answer2" type='text' /><br>
+            <input name="answer3" type='text' /><br>
+            <input name="answer4" type='text' /><br>
+            <button type='submit' class='btn btn-dark'>Create</button>
+        </fieldset>
+      </form>
+
+      <form id="updateSurvey">
+        <fieldset>
+        <legend>Update form</legend>
+            <input name="survey[question]" type='text' placeholder='Question'/><br>
+            <input name="answer1" type='text' /><br>
+            <input name="answer2" type='text' /><br>
+            <input name="answer3" type='text' /><br>
+            <input name="answer4" type='text' /><br>
+            <button type='submit' class='btn btn-dark'>Submit</button>
+        </fieldset>
+      </form>
+
+      <form id="updatePotato">
+        <fieldset>
+        <legend>Update form</legend>
+        <input name="potato[name]" type='text' placeholder='Potato name'/><br>
+        <input name="potato[weight]" type='text' placeholder='Potato weight'/><br>
+            <button type='submit' class='btn btn-dark'>Submit</button>
+        </fieldset>
+      </form>
+
+      <div id='answerStats'>
+        <p class='answer1'></p> <br>
+        <p class='answer2'></p> <br>
+        <p class='answer3'></p> <br>
+        <p class='answer4'></p> <br>
+      </div>
+    </div>
+    </div>
+    </body>
+</html>
