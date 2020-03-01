@@ -1,6 +1,6 @@
 'use strict'
 const surveyEvents = require('./survey/surveyEvents')
-
+const potatoEvents = require('./potato/events')
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 const authEvents = require('./auth/events')
@@ -19,10 +19,14 @@ $(() => {
   $('#createSurvey').hide()
   $('.createSurvey').hide()
   $('.surveyIndex').hide()
-  // $('#createSurvey').hide()
+  $('#createSurvey').hide()
+  $('#createPotato').hide()
+  $('.createPotato').hide()
   authEvents.addHandlers()
   surveyEvents.addHandlers()
+  potatoEvents.addHandlers()
   $('#updateSurvey').hide()
+  $('#updatePotato').hide()
   // answerEvents.addHandlers()
   $('#menu-toggle').click(function (e) {
     e.preventDefault()

@@ -30,6 +30,9 @@ const signInSuccess = function (response) {
   $('.changePassNav').show()
   $('.createSurvey').show()
   $('.surveyIndex').show()
+  // potatoes
+  $('.createPotato').show()
+  $('#potatoIndex').hide()
   $('#message').delay(1500).hide('Successfully signed up!')
   // $('input[type=email]').val('')
   // console.log(response)
@@ -59,6 +62,12 @@ const signOutSuccess = function (response) {
   $('.surveyList').hide()
   $('#oneSurvey').hide()
   $('#answerStats').hide()
+  // potatoes
+  $('#createPotato').hide()
+  $('.createPotato').hide()
+  $('#updatePotato').hide()
+  $('#onePotato').hide()
+  $('.potatoList').hide()
   // $('#sign-up').hide()
   // $('#sign-in').hide()
   $('.changePassNav').hide()
