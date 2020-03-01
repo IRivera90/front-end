@@ -5,6 +5,7 @@ const store = require('./../store')
 
 const onCreateSurvey = (event) => {
   event.preventDefault()
+  $('#updatePotato').hide()
   const form = event.target
   const data = getFormFields(form)
   // console.log(data)
@@ -32,7 +33,9 @@ const onShowSurveys = (event) => {
 
 const onShowOneSurvey = (event) => {
   const id = $(event.target).closest('section').data('id')
-
+  $('#updatePotato').hide()
+  $('#onePotato').hide()
+  $('#createPotato').hide()
   api.onShowOneSurvey(id)
     .then(ui.onGetOneSurveySuccess)
     .catch(ui.onGetOneSurveyFailure)
@@ -61,6 +64,9 @@ const onUpdateSurvey = (event) => {
   $('#answerStats').hide()
   $('#updateSurvey').show()
   $('#createSurvey').hide()
+  $('#updatePotato').hide()
+  $('#createPotato').hide()
+  $('#onePotato').hide()
 }
 
 const onEditSurvey = (event) => {
@@ -84,6 +90,7 @@ const onDeleteSurvey = (event) => {
   event.preventDefault()
   $('#answerStats').hide()
   $('#oneSurvey').hide()
+  $('#onePotato').hide()
   const id = $(event.target).closest('section').data('id')
   // console.log(id)
   event.stopPropagation()
@@ -98,6 +105,9 @@ const showCreateSurveyForm = (event) => {
   $('#updateSurvey').hide()
   $('#surveybox').show()
   $('#createSurvey').show()
+  $('#createPotato').hide()
+  $('#onePotato').hide()
+  $('#updatePotato').hide()
 }
 
 const addHandlers = function () {

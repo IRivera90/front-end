@@ -20,6 +20,7 @@
   <!-- <div class='sidebar-heading'>Side Bar</div> -->
   <div class='list-group list-group-flush'>
     <button type='button' class='surveyIndex list-group-item list-group-item-action bg-light'>Get all Surveys</button>
+    <button type='button' class='potatoIndex list-group-item list-group-item-action bg-light'>Get all Tatoes</button>
     <div class='list-group-item list-group-item-action allSurveyList'></div>
   </div>
 </div>
@@ -75,8 +76,18 @@
         </div>
       <!-- <button type='button' class='btn btn-dark surveyIndex'> Get All Surveys</button> -->
       <button type='button' class='btn btn-dark createSurvey'> Create a survey</button>
+      <button type='button' class='btn btn-dark createPotato'> Create a potato</button>
+
       <div id='surveybox'> </div>
 
+      <form id="createPotato">
+        <fieldset>
+        <legend>Potato form</legend>
+            <input name="potato[name]" type='text' placeholder='Potato type'/><br>
+            <input name="potato[weight]" type='text' placeholder='Potato weight'/><br>
+            <button type='submit' class='btn btn-dark'>Create</button>
+        </fieldset>
+      </form>
 
       <form id="createSurvey">
         <fieldset>
@@ -98,6 +109,15 @@
             <input name="answer2" type='text' /><br>
             <input name="answer3" type='text' /><br>
             <input name="answer4" type='text' /><br>
+            <button type='submit' class='btn btn-dark'>Submit</button>
+        </fieldset>
+      </form>
+
+      <form id="updatePotato">
+        <fieldset>
+        <legend>Update form</legend>
+        <input name="potato[name]" type='text' placeholder='Potato name'/><br>
+        <input name="potato[weight]" type='text' placeholder='Potato weight'/><br>
             <button type='submit' class='btn btn-dark'>Submit</button>
         </fieldset>
       </form>

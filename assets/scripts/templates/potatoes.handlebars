@@ -1,0 +1,11 @@
+{{#each potatos as |potato|}}
+  <section class='potatoList' data-id="{{potato._id}}">
+    <h3>
+      {{potato.name}}
+    </h3>
+    {{#equal potato.owner}}
+   <button type=button class='destroyPotato'>Remove</button>
+   <button type=button class='updatePotato'>Update</button>
+   {{/equal}}
+  </section>
+  {{/each}}
